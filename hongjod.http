@@ -1,0 +1,47 @@
+//@HostAddress = http://localhost:8080/api/v1
+
+@HostAddress = https://group-5-b1-dev.werockstar.dev/api/v1
+
+GET {{HostAddress}}/spenders/1
+
+
+### Get Spender Transactions by Spender ID
+GET {{HostAddress}}/spenders/1/transactions
+
+### Get Spender Transactions Summary by Spender ID
+GET {{HostAddress}}/spenders/1/transactions/summary
+
+
+### Create Spender
+POST {{HostAddress}}/transactions
+Content-Type: application/json
+
+{
+	"date": "2024-04-30T09:00:00.000Z",
+	"amount": 1000,
+	"category": "Food",
+	"transaction_type": "expense",
+	"spender_id": 1,
+	"note": "Lunch",
+	"image_url": "https://example.com/image1.jpg"
+}
+
+### Update Spender
+PUT {{HostAddress}}/transactions/13
+Content-Type: application/json
+
+{
+	"date": "2024-04-30T09:00:00.000Z",
+	"amount": 1000,
+	"category": "Food",
+	"transaction_type": "expense",
+	"spender_id": 1,
+	"note": "Lunch",
+	"image_url": "https://example.com/image1.jpg"
+}
+
+### Get Tx with amount 999
+GET {{HostAddress}}/transactions?amount=999
+
+### Get Tx
+GET {{HostAddress}}/transactions

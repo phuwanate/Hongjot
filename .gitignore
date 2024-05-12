@@ -1,0 +1,12 @@
+.idea
+**/*.terraform
+**/*.tfstate*
+infra/iac/sonarqube/ansible/creds/*
+**/inventories/sonarqube.ini
+**/.infracost
+.env
+dev.env
+launch.json
+c.out
+coverage.html
+.exe
